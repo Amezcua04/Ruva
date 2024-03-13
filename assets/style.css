@@ -1,0 +1,250 @@
+@font-face {
+    font-family: 'MiFuente';
+    src: url('fonts/BMWTypeNextProTT-Light.woff') format('woff');
+}
+
+body {
+    font-family: 'MiFuente', sans-serif;
+    /* Aplica la fuente personalizada a todo el cuerpo del documento */
+}
+
+/* Quita la decoración de los enlaces */
+.navbar-brand {
+    color: #fff;
+    font-weight: 700;
+    pointer-events: none;
+    /* Desactiva cualquier acción del cursor */
+    user-select: none;
+    /* Desactiva la selección de texto */
+}
+
+.navbar-brand:hover {
+    color: #fff;
+}
+
+a.navbar-brand {
+    font-size: 36px;
+}
+
+.nav-item .nav-link {
+    color: #fff;
+    font-weight: 700;
+}
+
+.nav-item .nav-link:visited {
+    color: #fff;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+/* Estilo para la barra de navegación */
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    /* Color negro humo con 50% de opacidad */
+    backdrop-filter: blur(2px);
+    /* Aplicar efecto de desenfoque */
+    -webkit-backdrop-filter: blur(10px);
+    /* Para navegadores webkit como Safari */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra para resaltar el efecto glassmorphism */
+    /* padding: 1.5rem 2rem; */
+    transition: background-color 0.3s ease;
+    /* Transición suave para el cambio de color */
+
+    height: 12vh;
+}
+
+.navbar a {
+    color: #fff;
+}
+
+/* Estilo para la barra de navegación al hacer scroll hacia abajo */
+.navbar.scrolled {
+    height: 12vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Cambiar a un color más oscuro al hacer scroll */
+}
+
+.navbar.scrolled a {
+    color: #fff;
+}
+
+.mt-4 {
+    margin-top: 100px !important;
+}
+
+/* Toggler panel */
+.navbar-toggler {
+    border: none;
+    /* Eliminar borde del botón */
+    background-color: transparent;
+    /* Fondo transparente */
+    color: #fff;
+    /* Color de texto blanco */
+}
+
+/* Estilo para el menú colapsado en dispositivos pequeños */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background: rgba(0, 0, 0, 0.8);
+        /* Color negro humo con 50% de opacidad */
+        backdrop-filter: blur(2px);
+        /* Aplicar efecto de desenfoque */
+        -webkit-backdrop-filter: blur(10px);
+        /* Para navegadores webkit como Safari */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        /* Sombra para resaltar el efecto glassmorphism */
+        transition: background-color 0.3s ease;
+        /* Transición suave para el cambio de color */
+        position: absolute;
+        /* Posición absoluta */
+        top: 100%;
+        /* Alineado con la parte inferior del botón */
+        left: 0;
+        /* Alineado a la izquierda */
+        width: 100%;
+        /* Ancho completo */
+        padding: 1rem;
+        /* Espaciado interior */
+        z-index: 1000;
+        /* Asegura que el menú esté por encima de otros elementos */
+    }
+
+    .navbar-nav {
+        width: 100%;
+        /* Ancho completo */
+        text-align: center;
+        /* Alinear elementos al centro */
+    }
+
+    .navbar-nav .nav-item {
+        width: 100%;
+        /* Ancho completo */
+        text-align: center;
+        /* Alinear elementos al centro */
+        margin-bottom: 0.5rem;
+        /* Espaciado inferior entre elementos */
+    }
+
+    .navbar-nav .nav-link {
+        color: #fff;
+        /* Color de texto blanco */
+    }
+}
+
+.container .panel img {
+    height: 150px;
+    width: 150px;
+}
+
+.panel {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Color blanco con opacidad */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    /* Sombra con opacidad */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para las imágenes dentro de los paneles */
+.panel img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Estilo para el video de fondo */
+.video-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    /* Mover el video detrás de otros elementos */
+}
+
+.video-header video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bottom-bar {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    width: 1100px;
+}
+
+.bottom-bar img {
+    width: 200px;
+}
+
+.mobile-content {
+    display: none;
+  }
+
+@media (max-width: 1200px) {
+    .mt-4 {
+        margin-top: 145px !important;
+    }
+    .desktop-content {
+        display: block;
+      }
+    
+      
+    
+}
+
+@media (max-width: 767px) {
+
+    /* Estilo para el menú desplegable en dispositivos móviles */
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.8);
+        /* Cambiar a un color más oscuro al hacer scroll */
+    }
+
+    a.navbar-brand {
+        font-size: 20px;
+    }
+
+    .navbar-nav .nav-link {
+        width: 100%;
+        /* Ancho completo */
+        text-align: center;
+        /* Alinear elementos al centro */
+    }
+
+    .bottom-bar {
+        bottom: 10px;
+        left: 0px;
+        right: 0;
+        transform: translateX(0%);
+    }
+
+    .mt-4 {
+        margin-top: 125px !important;
+    }
+
+    .column2,
+    .column3 {
+        display: none !important;
+    }
+
+    .desktop-content {
+        display: none;
+      }
+    
+      .mobile-content {
+        display: block;
+    }
+    
+}
