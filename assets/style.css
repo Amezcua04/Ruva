@@ -318,7 +318,7 @@ li {
 
 @media (max-width: 576px) {
     .custom{ 
-        height: 95vh;
+        height: 100vh;
     }
 
     .sub-title{
