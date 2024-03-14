@@ -12,9 +12,9 @@ body {
 .navbar-brand {
     color: #fff;
     font-weight: 700;
-    pointer-events: none;
+    /* pointer-events: none; */
     /* Desactiva cualquier acción del cursor */
-    user-select: none;
+    /* user-select: none; */
     /* Desactiva la selección de texto */
 }
 
@@ -76,6 +76,10 @@ li {
     margin-top: 100px !important;
 }
 
+.container {
+    margin-left: 65px;
+}
+
 /* Toggler panel */
 .navbar-toggler {
     border: none;
@@ -84,6 +88,13 @@ li {
     /* Fondo transparente */
     color: #fff;
     /* Color de texto blanco */
+}
+
+@media (min-width: 992px) {
+
+    .mt-4 {
+        margin-top: 130px !important;
+    }
 }
 
 /* Estilo para el menú colapsado en dispositivos pequeños */
@@ -109,7 +120,7 @@ li {
         /* Ancho completo */
         padding: 1rem;
         /* Espaciado interior */
-        z-index: 1000;
+        z-index: 2;
         /* Asegura que el menú esté por encima de otros elementos */
     }
 
@@ -158,14 +169,22 @@ li {
 
 /* Estilo para el video de fondo */
 .video-header {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
-    z-index: -1;
     /* Mover el video detrás de otros elementos */
+}
+
+.custom {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 82vh;
+    overflow: hidden;
 }
 
 .video-header video {
@@ -196,6 +215,7 @@ li {
     .mt-4 {
         margin-top: 145px !important;
     }
+    
     .desktop-content {
         display: block;
       }
@@ -204,7 +224,7 @@ li {
     
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 
     /* Estilo para el menú desplegable en dispositivos móviles */
     .navbar {
@@ -231,7 +251,11 @@ li {
     }
 
     .mt-4 {
-        margin-top: 125px !important;
+        margin-top: 135px !important;
+    }
+
+    .container {
+        margin-left: 25px;
     }
 
     .column2,
@@ -247,4 +271,57 @@ li {
         display: block;
     }
     
+}
+
+@media (max-width: 391px) {
+
+    .mt-4 {
+        margin-top: 115px !important;
+    }
+
+    .container {
+        margin-left: 0px;
+    }
+}
+
+/* Gallery */
+
+.custom-container img {
+    width: 300px;
+    height: 300px;
+    padding: 15px;
+}
+
+.sub-title {
+    margin-top: 250px;
+}
+@media (max-width: 768px) {
+
+    .custom{ 
+        height: 70vh;
+    }
+    .custom-container .col-md-9.order-md-2 {
+        order: 1;
+      }
+      .custom-container .col-md-3.order-md-1 {
+        order: 2;
+      }
+
+      .sub-title{
+        font-size: 20px;
+      }
+
+      .main-title {
+        font-size: 20px;
+      }
+}
+
+@media (max-width: 576px) {
+    .custom{ 
+        height: 95vh;
+    }
+
+    .sub-title{
+        margin-top: 0px;
+    }
 }
